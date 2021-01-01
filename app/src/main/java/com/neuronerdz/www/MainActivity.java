@@ -9,10 +9,12 @@ import android.webkit.WebResourceRequest;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     WebView webContainer;
+    int i=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,11 +31,16 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+
         if(webContainer.canGoBack())
             webContainer.goBack();
-        else
-        super.onBackPressed();
-
+        else {
+            i++;
+            if(i==2)
+                finishAffinity();
+            else
+                Toast.makeText(this,"Press Again to Exit",Toast.LENGTH_SHORT).show();
+        }
     }
     public void home(View view){
         Intent i =new Intent(this,MainActivity.class);
