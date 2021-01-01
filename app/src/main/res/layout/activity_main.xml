@@ -27,13 +27,14 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
+            android:onClick="home"
             android:orientation="vertical">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:src="@drawable/abc_vector_test">
+                android:src="@drawable/home_white">
 
             </ImageView>
 
@@ -41,6 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
+                android:layout_marginTop="10dp"
                 android:text="Home">
 
             </TextView>
@@ -59,7 +61,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 
-                android:src="@drawable/abc_vector_test">
+                android:src="@drawable/compass_white">
 
             </ImageView>
 
@@ -67,7 +69,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
-                android:text="Test">
+                android:layout_marginTop="10dp"
+                android:text="Category">
 
             </TextView>
         </LinearLayout>
@@ -80,9 +83,10 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/abc_vector_test">
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+
+                android:src="@drawable/terms_white">
 
             </ImageView>
 
@@ -90,6 +94,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
+                android:layout_marginTop="10dp"
                 android:text="License">
 
             </TextView>
