@@ -22,8 +22,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Test"
-            android:label="@string/title_activity_test"
+            android:name=".Explore"
+            android:label="@string/title_activity_explore"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity
             android:name=".MainActivity"

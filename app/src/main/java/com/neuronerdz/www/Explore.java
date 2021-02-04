@@ -3,20 +3,17 @@ package com.neuronerdz.www;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.view.View;
 
-public class Test extends AppCompatActivity {
+public class Explore extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test);
+        setContentView(R.layout.activity_explore);
         Toolbar toolbar = findViewById(R.id.topAppBar);
         setSupportActionBar(toolbar);
 
@@ -25,8 +22,8 @@ public class Test extends AppCompatActivity {
         Intent i =new Intent(this,MainActivity.class);
         startActivity(i);
     }
-    public void test(View view){
-        Intent i =new Intent(this,Test.class);
+    public void explore(View view){
+        Intent i =new Intent(this, Explore.class);
         startActivity(i);
     }
 }

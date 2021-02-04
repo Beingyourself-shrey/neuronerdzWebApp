@@ -5,9 +5,18 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
+    <ProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:id="@+id/progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:visibility="gone"
+        android:progress="10"
+        android:background="@color/black"
+        />
     <WebView
         android:id="@+id/webview"
+        android:layout_below="@+id/progress"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="70dp">
@@ -54,7 +63,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
-            android:onClick="test"
+            android:onClick="explore"
             android:orientation="vertical">
 
             <ImageView
@@ -70,7 +79,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/white"
                 android:layout_marginTop="10dp"
-                android:text="Category">
+                android:text="Explore">
 
             </TextView>
         </LinearLayout>
