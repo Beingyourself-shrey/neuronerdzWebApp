@@ -9,4 +9,5 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="about_us_content"><![CDATA[Welcome to neuronerdz, a bloggers backyard. Neuronerdz is not a mere content providing site, it is that and much more. It is a  backyard full of wonders. We have \'clios cronical\' for history lovers to dig out all the hidden secrets of time. \'Food streat\' is at your service to provide you with timely treats and to indulge your taste buds. Apart from these two gems we also dabble into travel, education, Science and Technology, entertainment etc. We watch the world with nerdz coloured glasses and always have a look out for stories. As we grow we hope to build a place rich in diversified content to appease one and all. So tag along to be in loop and keep exploring the nerd in you.]]></string>
 </resources>

@@ -12,21 +12,21 @@ import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
-
+public class Catergory extends AppCompatActivity {
     WebView webContainer;
     ProgressBar progress;
     int i=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        webContainer=findViewById(R.id.webview);
+        setContentView(R.layout.activity_catergory);
+        String category = getIntent().getStringExtra("category");
+        webContainer=findViewById(R.id.webview2);
         WebSettings webSettings=webContainer.getSettings();
         webSettings.setJavaScriptEnabled(true);
         webContainer.setWebViewClient(new WebViewClient());
-        webContainer.loadUrl("https://www.neuronerdz.com");
-        progress=findViewById(R.id.progress);
+        webContainer.loadUrl("https://www.neuronerdz.com/category/"+category);
+        progress=findViewById(R.id.progress2);
 
         webContainer.setWebChromeClient(new WebChromeClient(){
             @Override
@@ -41,9 +41,6 @@ public class MainActivity extends AppCompatActivity {
                 super.onProgressChanged(view, newProgress);
             }
         });
-
-
-
     }
 
     @Override
@@ -51,13 +48,8 @@ public class MainActivity extends AppCompatActivity {
 
         if(webContainer.canGoBack())
             webContainer.goBack();
-        else {
-            i++;
-            if(i==2)
-                finishAffinity();
-            else
-                Toast.makeText(this,"Press Again to Exit",Toast.LENGTH_SHORT).show();
-        }
+        else
+            super.onBackPressed();
     }
     public void home(View view){
         Intent i =new Intent(this,MainActivity.class);

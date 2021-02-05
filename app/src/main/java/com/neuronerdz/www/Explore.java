@@ -6,7 +6,10 @@ import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.util.Log;
 import android.view.View;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Explore extends AppCompatActivity {
 
@@ -24,6 +27,17 @@ public class Explore extends AppCompatActivity {
     }
     public void explore(View view){
         Intent i =new Intent(this, Explore.class);
+        startActivity(i);
+    }
+    public void about(View view){
+        Intent i =new Intent(this, AboutActivity.class);
+        startActivity(i);
+    }
+    public void clickedCategory(View v){
+        String category=v.getTag().toString();
+        Log.d(category, "clickedCategory: ");
+        Intent i=new Intent(this,Catergory.class);
+        i.putExtra("category", category);
         startActivity(i);
     }
 }

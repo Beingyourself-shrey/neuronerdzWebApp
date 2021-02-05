@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".Explore">
 
+
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -15,8 +16,8 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/neuronerdz_lower_navigation_bar"
-            app:navigationIcon="@drawable/abc_vector_test"
-            app:title="@string/title_activity_explore" />
+            app:title="@string/title_activity_explore"
+            app:titleTextColor="@color/white" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -31,43 +32,50 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingBottom="40dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="40dp">
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="105dp"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp"
-                android:paddingStart="6dp"
-                android:paddingLeft="6dp"
-                android:text="Topic"
-                android:textColor="@color/black"
-                android:textFontWeight="700"
-                android:textSize="30sp">
+                android:layout_gravity="bottom|right"
+                android:layout_margin="16dp"
+                android:backgroundTint="@color/black"
+                android:clickable="true"
+                android:contentDescription="Insights"
+                android:elevation="25dp"
+                android:onClick="clickedCategory"
+                android:outlineAmbientShadowColor="@color/neuronerdz"
+                android:outlineSpotShadowColor="@color/neuronerdz"
+                android:tag="history"
+                android:tooltipText="Insights"
+                app:srcCompat="@drawable/terms_white" />
 
-            </TextView>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:orientation="horizontal">
+
                 <FrameLayout
-                    android:padding="3dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1">
+                    android:layout_weight="1"
+                    android:onClick="clickedCategory"
+                    android:padding="3dp"
+                    android:tag="sci-tech">
+
                     <ImageView
-                            tools:ignore="ContentDescription"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:src="@drawable/science"/>
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/science"
+                        tools:ignore="ContentDescription" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="bottom"
-                        android:textAlignment="center"
+                        android:gravity="center|bottom"
                         android:text="Science and Tech"
                         android:textColor="@color/white"
                         android:textSize="20sp">
@@ -78,49 +86,52 @@
                 <FrameLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="clickedCategory"
                     android:padding="3dp"
-                    android:layout_weight="1">
+                    android:tag="history">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/history"/>
+                        android:src="@drawable/history" />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="bottom"
+                        android:gravity="center|bottom"
                         android:text="History"
-                        android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textSize="20sp">
 
                     </TextView>
+
                 </FrameLayout>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="44dp"
                 android:orientation="horizontal">
 
                 <FrameLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="clickedCategory"
                     android:padding="3dp"
-                    android:layout_weight="1">
+                    android:tag="education">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/education"/>
+                        android:src="@drawable/education" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="bottom"
+                        android:gravity="center|bottom"
                         android:text="Education and Career"
-                        android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textSize="20sp">
 
@@ -130,20 +141,21 @@
                 <FrameLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="clickedCategory"
                     android:padding="3dp"
-                    android:layout_weight="1">
+                    android:tag="food">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/food"/>
+                        android:src="@drawable/food" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="bottom"
+                        android:gravity="center|bottom"
                         android:text="Food"
-                        android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textSize="20sp">
 
@@ -154,26 +166,26 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
                 android:orientation="horizontal">
 
                 <FrameLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="clickedCategory"
                     android:padding="3dp"
-                    android:layout_weight="1">
+                    android:tag="travel-adventure">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/travel"/>
+                        android:src="@drawable/travel" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="bottom"
+                        android:gravity="center|bottom"
                         android:text="Travel and Adventure"
-                        android:textAlignment="center"
                         android:textColor="@color/white"
                         android:textSize="20sp">
 
@@ -183,22 +195,26 @@
                 <FrameLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="clickedCategory"
                     android:padding="3dp"
-                    android:layout_weight="1">
+                    android:tag="entertainment">
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/blog"/>
+                        android:src="@drawable/entertainment" />
+
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="bottom"
-                        android:text="Guest Blog"
-                        android:textAlignment="center"
+                        android:gravity="center|bottom"
+                        android:text="Entertainment"
                         android:textColor="@color/white"
                         android:textSize="20sp">
 
                     </TextView>
+
                 </FrameLayout>
             </LinearLayout>
 
@@ -252,7 +268,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-
+                android:tint="@color/neuronerdz"
                 android:src="@drawable/compass_white">
 
             </ImageView>
@@ -262,7 +278,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="Explore"
-                android:textColor="@color/white">
+                android:textColor="@color/neuronerdz">
 
             </TextView>
         </LinearLayout>
@@ -272,6 +288,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center"
+            android:onClick="about"
             android:orientation="vertical">
 
             <ImageView
@@ -286,7 +303,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="License"
+                android:text="About"
                 android:textColor="@color/white">
 
             </TextView>
